@@ -1,5 +1,5 @@
 import sys
-from checkers.blacklist import check_blacklist
+from checker.blacklist import check_blacklist
 
 def main():
     if len(sys.argv) < 2:
