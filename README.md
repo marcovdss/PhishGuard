@@ -73,20 +73,3 @@ Exemplo de saída:
 ## 📜 Licença
 
 Este projeto é licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-## 🤝 Contribuição
-
-Contribuições são bem-vindas! Se quiser sugerir melhorias ou corrigir bugs, faça um **fork** do repositório e envie um **pull request**.
-
----
-
-## 📧 Contato
-
-- 🔗 [Seu GitHub](https://github.com/seu-usuario)
-- ✉️ [Seu Email](mailto:seuemail@dominio.com)
-
----
-
-🚀 Desenvolvido por **Marcos** | 💻 Cybersecurity & Development
