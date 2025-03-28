@@ -4,12 +4,12 @@ PhishGuard é uma ferramenta de segurança cibernética para analisar URLs suspe
 
 ##  Funcionalidades
 
- **Verificação de blacklist:** Confere a URL em bancos de dados de phishing (Google Safe Browsing, OpenPhish, PhishTank).  
- **Análise de SSL:** Verifica a validade e confiabilidade do certificado SSL do site.  
- **WHOIS Lookup:** Obtém informações sobre o domínio (registrante, país, datas de criação/expiração).  
- **Verificação de similaridade de domínio:** Identifica domínios que tentam imitar sites legítimos.  
- **Análise de HTML e links:** Detecta formulários suspeitos e scripts maliciosos.  
- **Relatório em JSON:** Gera um resumo estruturado dos resultados.  
+ - **Verificação de blacklist:** Confere a URL em bancos de dados de phishing (Google Safe Browsing, OpenPhish, PhishTank).  
+ - **Análise de SSL:** Verifica a validade e confiabilidade do certificado SSL do site.  
+ - **WHOIS Lookup:** Obtém informações sobre o domínio (registrante, país, datas de criação/expiração).  
+ - **Verificação de similaridade de domínio:** Identifica domínios que tentam imitar sites legítimos.  
+ - **Análise de HTML e links:** Detecta formulários suspeitos e scripts maliciosos.  
+ - **Relatório em JSON:** Gera um resumo estruturado dos resultados.  
 
 ---
 
