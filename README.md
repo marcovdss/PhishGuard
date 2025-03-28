@@ -51,21 +51,24 @@ PhishGuard é uma ferramenta de segurança cibernética para analisar URLs suspe
 
 Execute o PhishGuard passando a URL suspeita como argumento:
 ```sh
-python phishguard.py https://site-suspeito.com
+python phishguard.py https://example.com
 ```
 
 Exemplo de saída:
-```json
-{
-  "url": "https://site-suspeito.com",
-  "blacklist": "Presente no Google Safe Browsing",
-  "ssl_valid": false,
-  "whois": {
-    "registrar": "Namecheap",
-    "creation_date": "2024-01-01"
-  },
-  "html_analysis": "Formulários suspeitos detectados"
-}
+```
+🔍 Analisando: https://example.com
+
+✅ URL não encontrada na blacklist.
+Validade do certificado: 365 dias
+✅ Certificado SSL está válido.
+
+🔍 Obtendo informações WHOIS:
+
+Domain Name: EXAMPLE.COM
+Registrar: RESERVED-Internet Assigned Numbers Authority
+Creation Date: 1995-08-14 04:00:00
+Expiration Date: 2025-08-13 04:00:00
+Name Servers: A.IANA-SERVERS.NET, B.IANA-SERVERS.NET
 ```
 
 ---
