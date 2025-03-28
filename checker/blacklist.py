@@ -1,9 +1,19 @@
 import requests
-from config import GOOGLE_SAFE_BROWSING_API_KEY
+import os
+from dotenv import load_dotenv
+
+# Carregar variáveis do .env
+load_dotenv()
 
 def check_blacklist(url):
     """Verifica se a URL está na blacklist do Google Safe Browsing."""
-    api_url = "https://safebrowsing.googleapis.com/v4/threatMatches:find?key=" + GOOGLE_SAFE_BROWSING_API_KEY
+    # Obter a chave da API do arquivo .env
+    api_key = os.getenv('GOOGLE_SAFE_BROWSING_API_KEY')
+
+    if not api_key:
+        raise ValueError("A chave da API do Google Safe Browsing não foi encontrada no arquivo .env.")
+
+    api_url = f"https://safebrowsing.googleapis.com/v4/threatMatches:find?key={api_key}"
     payload = {
         "client": {"clientId": "phishguard", "clientVersion": "1.0"},
         "threatInfo": {
@@ -13,5 +23,8 @@ def check_blacklist(url):
             "threatEntries": [{"url": url}]
         }
     }
+    
     response = requests.post(api_url, json=payload)
+    
+    # Retornar se a URL está ou não na blacklist
     return response.json().get("matches") is not None
