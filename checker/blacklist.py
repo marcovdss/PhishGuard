@@ -2,7 +2,7 @@ import requests
 import os
 from dotenv import load_dotenv
 
-# Carregar variáveis do .env
+
 load_dotenv()
 
 def check_blacklist(url):
@@ -26,5 +26,5 @@ def check_blacklist(url):
     
     response = requests.post(api_url, json=payload)
     
-    # Retornar se a URL está ou não na blacklist
+    
     return response.json().get("matches") is not None

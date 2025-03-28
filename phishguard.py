@@ -25,10 +25,14 @@ def main():
         print("🚨 Certificado SSL inválido ou expirado.")
 
     # Consultar informações WHOIS
-    print("\n🔍 Obtendo informações WHOIS:")
+    print("\n🔍 Obtendo informações WHOIS:\n")
     whois_info = get_whois_info(url)
-    for key, value in whois_info.items():
-        print(f"{key}: {value}")
+    if "error" in whois_info:
+        print(f"🚨 Erro ao obter WHOIS: {whois_info['error']}")
+    else:
+        for key, value in whois_info.items():
+            print(f"{key}: {value}")
+    print("\n" + "="*50 + "\n")
 
 if __name__ == "__main__":
     main()
