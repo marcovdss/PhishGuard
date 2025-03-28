@@ -1,19 +1,19 @@
-# 🛡 PhishGuard - Detector de Phishing
+#  PhishGuard - Detector de Phishing
 
 PhishGuard é uma ferramenta de segurança cibernética para analisar URLs suspeitas e detectar possíveis sites de phishing. Ele verifica listas negras, analisa certificados SSL, obtém informações WHOIS e inspeciona o conteúdo HTML em busca de elementos maliciosos.
 
-## 🚀 Funcionalidades
+##  Funcionalidades
 
-✅ **Verificação de blacklist:** Confere a URL em bancos de dados de phishing (Google Safe Browsing, OpenPhish, PhishTank).  
-✅ **Análise de SSL:** Verifica a validade e confiabilidade do certificado SSL do site.  
-✅ **WHOIS Lookup:** Obtém informações sobre o domínio (registrante, país, datas de criação/expiração).  
-✅ **Verificação de similaridade de domínio:** Identifica domínios que tentam imitar sites legítimos.  
-✅ **Análise de HTML e links:** Detecta formulários suspeitos e scripts maliciosos.  
-✅ **Relatório em JSON:** Gera um resumo estruturado dos resultados.  
+ **Verificação de blacklist:** Confere a URL em bancos de dados de phishing (Google Safe Browsing, OpenPhish, PhishTank).  
+ **Análise de SSL:** Verifica a validade e confiabilidade do certificado SSL do site.  
+ **WHOIS Lookup:** Obtém informações sobre o domínio (registrante, país, datas de criação/expiração).  
+ **Verificação de similaridade de domínio:** Identifica domínios que tentam imitar sites legítimos.  
+ **Análise de HTML e links:** Detecta formulários suspeitos e scripts maliciosos.  
+ **Relatório em JSON:** Gera um resumo estruturado dos resultados.  
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Python 3**
 - **Requests** (para requisições HTTP)
@@ -25,7 +25,7 @@ PhishGuard é uma ferramenta de segurança cibernética para analisar URLs suspe
 
 ---
 
-## 📦 Instalação e Configuração
+##  Instalação e Configuração
 
 1. Clone o repositório:
    ```sh
@@ -47,7 +47,7 @@ PhishGuard é uma ferramenta de segurança cibernética para analisar URLs suspe
 
 ---
 
-## 🖥 Como Usar
+##  Como Usar
 
 Execute o PhishGuard passando a URL suspeita como argumento:
 ```sh
