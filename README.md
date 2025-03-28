@@ -70,6 +70,6 @@ Exemplo de saída:
 
 ---
 
-## 📜 Licença
+##  Licença
 
 Este projeto é licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
