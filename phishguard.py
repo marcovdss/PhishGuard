@@ -1,6 +1,7 @@
 import sys
 from checker.blacklist import check_blacklist
 from checker.check_ssl import check_ssl
+from checker.whois_lookup import get_whois_info
 
 def main():
     if len(sys.argv) < 2:
@@ -22,6 +23,12 @@ def main():
         print("✅ Certificado SSL está válido.")
     else:
         print("🚨 Certificado SSL inválido ou expirado.")
+
+    # Consultar informações WHOIS
+    print("\n🔍 Obtendo informações WHOIS:")
+    whois_info = get_whois_info(url)
+    for key, value in whois_info.items():
+        print(f"{key}: {value}")
 
 if __name__ == "__main__":
     main()

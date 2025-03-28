@@ -14,3 +14,5 @@ def get_whois_info(domain):
         return {
             "error": f"Erro ao obter WHOIS: {str(e)}"
         }
+
+#print (check_ssl("https://www.google.com"))
