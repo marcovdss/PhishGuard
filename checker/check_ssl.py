@@ -23,8 +23,8 @@ def check_ssl(url):
         not_before_date = datetime.strptime(not_before, "%b %d %H:%M:%S %Y GMT")
         not_after_date = datetime.strptime(not_after, "%b %d %H:%M:%S %Y GMT")
         
-        not_before_date = not_before_date.replace(tzinfo=timezone.utc)  # Torna o datetime "aware"
-        not_after_date = not_after_date.replace(tzinfo=timezone.utc)    # Torna o datetime "aware"
+        not_before_date = not_before_date.replace(tzinfo=timezone.utc)
+        not_after_date = not_after_date.replace(tzinfo=timezone.utc)  
         
         validity_days = (not_after_date - not_before_date).days
         days_remaining = (not_after_date - datetime.now(timezone.utc)).days
@@ -35,5 +35,3 @@ def check_ssl(url):
     except Exception as e:
         print(f"Erro ao verificar SSL: {e}")
         return False
-
-#print (check_ssl("https://www.google.com"))
