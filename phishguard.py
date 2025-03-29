@@ -25,25 +25,21 @@ def main():
         print(f"🚨 **Erro ao verificar no Google Safe Browsing**: {str(e)}")
     print("-"*50)
 
-    try:
+    try: 
         print("⚠️ **Verificação no VirusTotal**:")
         virustotal_result = check_virustotal(url)
-        
-        if isinstance(virustotal_result, dict):
-            if virustotal_result.get("malicious", False):
-                print(f"🚨 **URL está marcada como maliciosa no VirusTotal.**\nAmeaça: {virustotal_result.get('threat_name', 'Desconhecida')}")
-            else:
-                print("✅ **URL não está marcada como maliciosa no VirusTotal.**")
-        elif isinstance(virustotal_result, bool):
-            if virustotal_result:
-                print("🚨 **URL está marcada como maliciosa no VirusTotal.**")
-            else:
-                print("✅ **URL não está marcada como maliciosa no VirusTotal.**")
+
+        if virustotal_result is None:
+            print("🚨 **Não foi possível verificar a URL no VirusTotal.**")
+        elif virustotal_result:
+            print("🚨 **URL está marcada como maliciosa no VirusTotal.**")
         else:
-            print("🚨 **Erro: O retorno do VirusTotal não é válido.**")
+            print("✅ **URL não está marcada como maliciosa no VirusTotal.**")
     except Exception as e:
         print(f"🚨 **Erro ao verificar no VirusTotal**: {str(e)}")
-    print("-"*50)
+
+    print("-" * 50)
+
 
     try:
         print("🔒 **Verificação do Certificado SSL**:")
