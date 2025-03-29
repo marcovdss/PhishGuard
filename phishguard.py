@@ -3,6 +3,7 @@ from checker.blacklist import check_blacklist
 from checker.blacklist import check_virustotal
 from checker.check_ssl import check_ssl
 from checker.whois_lookup import get_whois_info
+from checker.check_tld import check_tld
 
 def main():
     if len(sys.argv) < 2:
@@ -24,7 +25,6 @@ def main():
         print(f"🚨 **Erro ao verificar no Google Safe Browsing**: {str(e)}")
     print("-"*50)
 
-    
     try:
         print("⚠️ **Verificação no VirusTotal**:")
         virustotal_result = check_virustotal(url)
@@ -60,6 +60,7 @@ def main():
     print("-"*50)
 
     print("🔍 **Obtendo informações WHOIS**:\n")
+
     try:
         whois_info = get_whois_info(url)
         if "error" in whois_info:
@@ -71,6 +72,15 @@ def main():
         print(f"🚨 **Erro ao obter informações WHOIS**: {str(e)}")
     
     print("="*50)
+
+    try:
+        print("🔍 **Verificação do TLD**:")
+        if check_tld(url):
+            print("✅ **TLD é válido.**")
+        else:
+            print("🚨 **TLD inválido.**")
+    except Exception as e:
+        print(f"🚨 **Erro ao verificar TLD**: {str(e)}")
 
 if __name__ == "__main__":
     main()
