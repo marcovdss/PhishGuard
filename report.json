@@ -1,0 +1,16 @@
+{
+    "url": "marcola.anderson.lesniweskli",
+    "results": {
+        "blacklist": "✅ URL não encontrada na blacklist.",
+        "virustotal": "✅ URL não está marcada como maliciosa no VirusTotal.",
+        "ssl": "🚨 Certificado SSL inválido ou expirado.",
+        "whois": {
+            "Domain Name": "N/A",
+            "Registrar": "N/A",
+            "Creation Date": "N/A",
+            "Expiration Date": "N/A",
+            "Name Servers": "N/A"
+        },
+        "tld": "🚨 TLD inválido."
+    }
+}
