@@ -41,16 +41,18 @@ def check_virustotal(url):
         "x-apikey": api_key
     }
 
-    response = requests.get(api_url, headers=headers)
-
-    if response.status_code == 200:
-        data = response.json()
-        if "data" in data and "attributes" in data["data"]:
-            attributes = data["data"]["attributes"]
-            if attributes["last_analysis_stats"]["malicious"] > 0:
-                return True
-            else:
-                return False
-    else:
+    try:
+        response = requests.get(api_url, headers=headers)
+        
+        if response.status_code == 200:
+            data = response.json()
+            if "data" in data and "attributes" in data["data"]:
+                attributes = data["data"]["attributes"]
+                return attributes["last_analysis_stats"]["malicious"] > 0
+        
         print(f"Erro ao fazer a requisição para o VirusTotal. Status code: {response.status_code}")
-        return False
+        return None  # Indica que não foi possível verificar
+
+    except requests.RequestException as e:
+        print(f"Erro de conexão com VirusTotal: {e}")
+        return None  # Indica erro na requisição
